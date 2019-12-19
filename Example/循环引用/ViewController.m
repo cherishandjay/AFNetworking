@@ -26,7 +26,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     NSURLSession* session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[NSOperationQueue mainQueue] ];
      
-    NSURLSessionDataTask* task = [session dataTaskWithURL:[NSURL URLWithString:@"https://www."] ];
+    NSURLSessionDataTask* task = [session dataTaskWithURL:[NSURL URLWithString:@"https://1z4-devmng2.myzmodo.com/zmd/common/globalconfig?clienttype=1&language=en&platform=2"] ];
     [task resume];
 
 }
