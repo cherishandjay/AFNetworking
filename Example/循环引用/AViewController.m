@@ -33,8 +33,6 @@
  
     __weak typeof(self) weakself = self;
      NSInteger identifier = [[ZSWebInterface sharedInstance]taskIndentifierCoreWebInterfaceWithPostRequest:@"common/globalconfig" pararms:@{@"clienttype":@"1",@"language":@"en",@"platform":@"2"} success:^(NSDictionary * _Nonnull data) {
-              NSLog(@"ZSWebInterface:%@",data);
-
         if (weakself.success) {
             weakself.success(data);
         }
@@ -42,7 +40,7 @@
           } failure:^(NSDictionary * _Nonnull data) {
               NSLog(@"Failure:%@",data);
           }];
-    
+//    [[ZSWebInterface sharedInstance]cacelTaskId:identifier];
    
 }
 

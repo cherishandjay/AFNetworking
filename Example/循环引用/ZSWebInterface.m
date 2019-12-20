@@ -17,7 +17,7 @@
 
 @property (nonatomic, strong) NSString *baseUrlString;
 
-@property (atomic, strong) NSMutableDictionary<NSNumber*,TaskObject *>*taskDic;
+@property (nonatomic, strong) NSMutableDictionary<NSNumber*,TaskObject *>*taskDic;
 
 @end
 
@@ -147,13 +147,16 @@ didCompleteWithError:(nullable NSError *)error
     
     if (error == nil) {
         NSDictionary * result = [NSJSONSerialization JSONObjectWithData:objctask.mutableData options:NSJSONReadingMutableLeaves error:nil];
-        objctask.successBlock(result);
+        if (objctask.successBlock) {
+            objctask.successBlock(result);
+        }
         [self.taskDic removeObjectForKey:@(task.taskIdentifier)];
 //        NSLog(@"%@的result:%@",objctask.task.originalRequest.URL.absoluteString,result);
     }else{
-        if (objctask!= nil) {//为什么这里会crash
+        if (objctask.failureBlock) {//调用block之前一定要判空
             objctask.failureBlock([error userInfo]);
         }
+        
         [self.taskDic removeObjectForKey:@(task.taskIdentifier)];
     }
 }
@@ -215,6 +218,7 @@ didCompleteWithError:(nullable NSError *)error
     }
     return _taskDic;
 }
+
 
 
 @end
