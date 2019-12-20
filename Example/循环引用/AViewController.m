@@ -32,34 +32,26 @@
     [super touchesBegan:touches withEvent:event];
  
     __weak typeof(self) weakself = self;
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        NSInteger identifier = [[ZSWebInterface sharedInstance]taskIndentifierCoreWebInterfaceWithPostRequest:@"common/globalconfig" pararms:@{@"clienttype":@"1",@"language":@"en",@"platform":@"2"} success:^(NSDictionary * _Nonnull data) {
-//                  NSLog(@"ZSWebInterface:%@",data);
-////            if (weakself == nil) {
-////                return ;
-////            }
-//            weakself.view.backgroundColor = [UIColor whiteColor];
-////            weakself.success(data);
-//
-//              } failure:^(NSDictionary * _Nonnull data) {
-//                  NSLog(@"Failure:%@",data);
-//              }];
-//           });
+     NSInteger identifier = [[ZSWebInterface sharedInstance]taskIndentifierCoreWebInterfaceWithPostRequest:@"common/globalconfig" pararms:@{@"clienttype":@"1",@"language":@"en",@"platform":@"2"} success:^(NSDictionary * _Nonnull data) {
+              NSLog(@"ZSWebInterface:%@",data);
+
+        if (weakself.success) {
+            weakself.success(data);
+        }
+
+          } failure:^(NSDictionary * _Nonnull data) {
+              NSLog(@"Failure:%@",data);
+          }];
+    
    
-    TaskObject* objc = [TaskObject new];
-    objc.successBlock = ^(NSDictionary * _Nonnull data) {
-        NSLog(@"data:%@",data);
-    };
-    objc = nil;
-    
-    objc.successBlock(@{@"1":@"3"});
-    
 }
 
 
 - (void)dealloc
 {
     NSLog(@"AViewController dealloc");
+    self.success = nil;
+    
 }
 
 @end
