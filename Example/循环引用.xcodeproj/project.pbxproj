@@ -13,11 +13,11 @@
 		3F68C309223A3EBA00AA446F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F68C308223A3EBA00AA446F /* Assets.xcassets */; };
 		3F68C30C223A3EBA00AA446F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F68C30A223A3EBA00AA446F /* LaunchScreen.storyboard */; };
 		3F68C30F223A3EBA00AA446F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F68C30E223A3EBA00AA446F /* main.m */; };
-		3F68C317223A3EDF00AA446F /* FistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F68C316223A3EDF00AA446F /* FistViewController.m */; };
 		3F68C31A223A431000AA446F /* LJYProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F68C319223A431000AA446F /* LJYProxy.m */; };
 		C14F9A4F23AC6A5F002C3CAD /* ZSWebInterface.m in Sources */ = {isa = PBXBuildFile; fileRef = C14F9A4E23AC6A5F002C3CAD /* ZSWebInterface.m */; };
 		C151E33023A8EEAB0052AA91 /* CustomThread.m in Sources */ = {isa = PBXBuildFile; fileRef = C151E32F23A8EEAB0052AA91 /* CustomThread.m */; };
 		C186B67E23AC77DE00ACC035 /* TaskObject.m in Sources */ = {isa = PBXBuildFile; fileRef = C186B67D23AC77DE00ACC035 /* TaskObject.m */; };
+		C186B68123AC94BE00ACC035 /* AViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C186B68023AC94BE00ACC035 /* AViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +31,6 @@
 		3F68C30B223A3EBA00AA446F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F68C30D223A3EBA00AA446F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F68C30E223A3EBA00AA446F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3F68C315223A3EDF00AA446F /* FistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FistViewController.h; sourceTree = "<group>"; };
-		3F68C316223A3EDF00AA446F /* FistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FistViewController.m; sourceTree = "<group>"; };
 		3F68C318223A431000AA446F /* LJYProxy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LJYProxy.h; sourceTree = "<group>"; };
 		3F68C319223A431000AA446F /* LJYProxy.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LJYProxy.m; sourceTree = "<group>"; };
 		C14F9A4D23AC6A5F002C3CAD /* ZSWebInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZSWebInterface.h; sourceTree = "<group>"; };
@@ -41,6 +39,8 @@
 		C151E32F23A8EEAB0052AA91 /* CustomThread.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomThread.m; sourceTree = "<group>"; };
 		C186B67C23AC77DE00ACC035 /* TaskObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaskObject.h; sourceTree = "<group>"; };
 		C186B67D23AC77DE00ACC035 /* TaskObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaskObject.m; sourceTree = "<group>"; };
+		C186B67F23AC94BE00ACC035 /* AViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AViewController.h; sourceTree = "<group>"; };
+		C186B68023AC94BE00ACC035 /* AViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,14 +77,14 @@
 				3F68C300223A3EB900AA446F /* AppDelegate.m */,
 				3F68C302223A3EB900AA446F /* ViewController.h */,
 				3F68C303223A3EB900AA446F /* ViewController.m */,
+				C186B67F23AC94BE00ACC035 /* AViewController.h */,
+				C186B68023AC94BE00ACC035 /* AViewController.m */,
 				C14F9A4D23AC6A5F002C3CAD /* ZSWebInterface.h */,
 				C14F9A4E23AC6A5F002C3CAD /* ZSWebInterface.m */,
 				C186B67C23AC77DE00ACC035 /* TaskObject.h */,
 				C186B67D23AC77DE00ACC035 /* TaskObject.m */,
 				C151E32E23A8EEAB0052AA91 /* CustomThread.h */,
 				C151E32F23A8EEAB0052AA91 /* CustomThread.m */,
-				3F68C315223A3EDF00AA446F /* FistViewController.h */,
-				3F68C316223A3EDF00AA446F /* FistViewController.m */,
 				3F68C318223A431000AA446F /* LJYProxy.h */,
 				3F68C319223A431000AA446F /* LJYProxy.m */,
 				3F68C305223A3EB900AA446F /* Main.storyboard */,
@@ -174,9 +174,9 @@
 				C14F9A4F23AC6A5F002C3CAD /* ZSWebInterface.m in Sources */,
 				C186B67E23AC77DE00ACC035 /* TaskObject.m in Sources */,
 				C151E33023A8EEAB0052AA91 /* CustomThread.m in Sources */,
-				3F68C317223A3EDF00AA446F /* FistViewController.m in Sources */,
 				3F68C304223A3EB900AA446F /* ViewController.m in Sources */,
 				3F68C31A223A431000AA446F /* LJYProxy.m in Sources */,
+				C186B68123AC94BE00ACC035 /* AViewController.m in Sources */,
 				3F68C30F223A3EBA00AA446F /* main.m in Sources */,
 				3F68C301223A3EB900AA446F /* AppDelegate.m in Sources */,
 			);

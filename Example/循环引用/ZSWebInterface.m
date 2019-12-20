@@ -17,7 +17,7 @@
 
 @property (nonatomic, strong) NSString *baseUrlString;
 
-@property (nonatomic, strong) NSMutableDictionary<NSNumber*,TaskObject *>*taskDic;
+@property (atomic, strong) NSMutableDictionary<NSNumber*,TaskObject *>*taskDic;
 
 @end
 
@@ -88,6 +88,13 @@ static ZSWebInterface* objc = nil;
     return task.taskIdentifier;
 }
 
+- (void)cacelTaskId:(NSInteger)taskId
+{
+    [self.taskDic[@(taskId)].task cancel];
+    [self.taskDic removeObjectForKey:@(taskId)];
+}
+
+
 NSString * AFQueryStringFromParameters(NSDictionary *parameters) {
     __block NSMutableArray *mutablePairs = [NSMutableArray array];
 //    for (AFQueryStringPair *pair in AFQueryStringPairsFromDictionary(parameters)) {
@@ -134,13 +141,19 @@ NSString * AFQueryStringFromParameters(NSDictionary *parameters) {
 didCompleteWithError:(nullable NSError *)error
 {
     TaskObject* objctask = self.taskDic[@(task.taskIdentifier)];
+    if (objctask == nil) {
+        return;
+    }
+    
     if (error == nil) {
         NSDictionary * result = [NSJSONSerialization JSONObjectWithData:objctask.mutableData options:NSJSONReadingMutableLeaves error:nil];
         objctask.successBlock(result);
         [self.taskDic removeObjectForKey:@(task.taskIdentifier)];
 //        NSLog(@"%@的result:%@",objctask.task.originalRequest.URL.absoluteString,result);
     }else{
-        objctask.failureBlock([error userInfo]);
+        if (objctask!= nil) {//为什么这里会crash
+            objctask.failureBlock([error userInfo]);
+        }
         [self.taskDic removeObjectForKey:@(task.taskIdentifier)];
     }
 }

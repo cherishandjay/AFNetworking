@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TaskObject.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -18,6 +19,8 @@ NS_ASSUME_NONNULL_BEGIN
                                 pararms:(NSDictionary *)dict
                                 success:(void (^)(NSDictionary *))success
                                                      failure:(void (^)(NSDictionary *))failure;
+
+- (void)cacelTaskId:(NSInteger)taskId;
 
 @end
 
