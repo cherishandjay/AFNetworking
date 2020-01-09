@@ -71,7 +71,7 @@ static ZSWebInterface* objc = nil;
     NSURL* url = [NSURL URLWithString:[NSString stringWithFormat:@"%@%@",self.baseUrlString,requestPath]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     request.HTTPMethod = @"POST";
-    request.HTTPBody = [AFQueryStringFromParameters(dict) dataUsingEncoding:NSUTF8StringEncoding];
+    request.HTTPBody = [NFQueryStringFromParameters(dict) dataUsingEncoding:NSUTF8StringEncoding];
     task = [self.session dataTaskWithRequest:request];
       //  task = [session dataTaskWithURL:[NSURL URLWithString:@"https://1z4-devmng2.myzmodo.com/zmd/common/globalconfig?clienttype=1&language=en&platform=2"] completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
       //           NSDictionary * result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
@@ -100,7 +100,7 @@ static ZSWebInterface* objc = nil;
     body of the function
  }
  */
-NSString * AFQueryStringFromParameters(NSDictionary *parameters) {
+NSString * NFQueryStringFromParameters(NSDictionary *parameters) {
     __block NSMutableArray *mutablePairs = [NSMutableArray array];
 //    for (AFQueryStringPair *pair in AFQueryStringPairsFromDictionary(parameters)) {
 //        [mutablePairs addObject:[pair URLEncodedStringValue]];
