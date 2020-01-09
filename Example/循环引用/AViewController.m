@@ -25,6 +25,11 @@
     self.success = ^(NSDictionary * _Nonnull data) {
         NSLog(@"%@",data);
     };
+    //DIDIDdidi
+    
+    
+    
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
@@ -33,9 +38,9 @@
  
     __weak typeof(self) weakself = self;
      NSInteger identifier = [[ZSWebInterface sharedInstance]taskIndentifierCoreWebInterfaceWithPostRequest:@"common/globalconfig" pararms:@{@"clienttype":@"1",@"language":@"en",@"platform":@"2"} success:^(NSDictionary * _Nonnull data) {
-        if (weakself.success) {
+//        if (weakself.success) {
             weakself.success(data);
-        }
+//        }
 
           } failure:^(NSDictionary * _Nonnull data) {
               NSLog(@"Failure:%@",data);
@@ -48,7 +53,7 @@
 - (void)dealloc
 {
     NSLog(@"AViewController dealloc");
-    self.success = nil;
+//    self.success = nil;
     
 }
 

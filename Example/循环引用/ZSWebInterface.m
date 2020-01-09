@@ -56,12 +56,11 @@ static ZSWebInterface* objc = nil;
     self.myqueue = queue;
     queue.name = @"subthread";
     self.session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:queue];
-    self.baseUrlString = @"https://1z4-devmng2.myzmodo.com/zmd/";
-    
+    self.baseUrlString = @"https://1z4-devmng2.my00000.com/cmd/";
 }
 
 
-- (NSUInteger)taskIndentifierCoreWebInterfaceWithPostRequest:(NSString *)requestPath
+-(NSUInteger)taskIndentifierCoreWebInterfaceWithPostRequest:(NSString *)requestPath
                                 pararms:(NSDictionary *)dict
                                 success:(void (^)(NSDictionary *))success
                                 failure:(void (^)(NSDictionary *))failure
@@ -94,7 +93,13 @@ static ZSWebInterface* objc = nil;
     [self.taskDic removeObjectForKey:@(taskId)];
 }
 
-
+/**
+ c函数
+ return_type function_name( parameter list )
+ {
+    body of the function
+ }
+ */
 NSString * AFQueryStringFromParameters(NSDictionary *parameters) {
     __block NSMutableArray *mutablePairs = [NSMutableArray array];
 //    for (AFQueryStringPair *pair in AFQueryStringPairsFromDictionary(parameters)) {
@@ -153,7 +158,7 @@ didCompleteWithError:(nullable NSError *)error
         [self.taskDic removeObjectForKey:@(task.taskIdentifier)];
 //        NSLog(@"%@的result:%@",objctask.task.originalRequest.URL.absoluteString,result);
     }else{
-        if (objctask.failureBlock) {//调用block之前一定要判空
+        if (objctask.failureBlock) {//调用block之前一定要判空,不然会crash
             objctask.failureBlock([error userInfo]);
         }
         

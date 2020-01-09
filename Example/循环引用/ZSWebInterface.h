@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 +(instancetype)sharedInstance;
 
-- (NSUInteger)taskIndentifierCoreWebInterfaceWithPostRequest:(NSString *)requestPath
+-(NSUInteger)taskIndentifierCoreWebInterfaceWithPostRequest:(NSString *)requestPath
                                 pararms:(NSDictionary *)dict
                                 success:(void (^)(NSDictionary *))success
                                                      failure:(void (^)(NSDictionary *))failure;

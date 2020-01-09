@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F03A58523C38B0200BDFFA4 /* HKtextfield.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F03A58423C38B0200BDFFA4 /* HKtextfield.m */; };
 		3F68C301223A3EB900AA446F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F68C300223A3EB900AA446F /* AppDelegate.m */; };
 		3F68C304223A3EB900AA446F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F68C303223A3EB900AA446F /* ViewController.m */; };
 		3F68C307223A3EB900AA446F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F68C305223A3EB900AA446F /* Main.storyboard */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F03A58323C38B0200BDFFA4 /* HKtextfield.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HKtextfield.h; sourceTree = "<group>"; };
+		3F03A58423C38B0200BDFFA4 /* HKtextfield.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HKtextfield.m; sourceTree = "<group>"; };
 		3F68C2FC223A3EB900AA446F /* 循环引用.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "循环引用.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F68C2FF223A3EB900AA446F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3F68C300223A3EB900AA446F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,6 +82,8 @@
 				3F68C303223A3EB900AA446F /* ViewController.m */,
 				C186B67F23AC94BE00ACC035 /* AViewController.h */,
 				C186B68023AC94BE00ACC035 /* AViewController.m */,
+				3F03A58323C38B0200BDFFA4 /* HKtextfield.h */,
+				3F03A58423C38B0200BDFFA4 /* HKtextfield.m */,
 				C14F9A4D23AC6A5F002C3CAD /* ZSWebInterface.h */,
 				C14F9A4E23AC6A5F002C3CAD /* ZSWebInterface.m */,
 				C186B67C23AC77DE00ACC035 /* TaskObject.h */,
@@ -175,6 +180,7 @@
 				C186B67E23AC77DE00ACC035 /* TaskObject.m in Sources */,
 				C151E33023A8EEAB0052AA91 /* CustomThread.m in Sources */,
 				3F68C304223A3EB900AA446F /* ViewController.m in Sources */,
+				3F03A58523C38B0200BDFFA4 /* HKtextfield.m in Sources */,
 				3F68C31A223A431000AA446F /* LJYProxy.m in Sources */,
 				C186B68123AC94BE00ACC035 /* AViewController.m in Sources */,
 				3F68C30F223A3EBA00AA446F /* main.m in Sources */,

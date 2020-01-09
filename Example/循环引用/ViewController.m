@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "ZSWebInterface.h"
+#import "HKtextfield.h"
 
 
 @interface ViewController ()<NSURLSessionDelegate,NSURLSessionDataDelegate>
@@ -24,6 +25,10 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    UITextView* text = [[UITextView alloc]initWithFrame:CGRectMake(100, 120, 120, 84)];
+    text.backgroundColor = [UIColor lightGrayColor];
+    text.text = @"AVFFF";
+    [self.view addSubview:text];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
